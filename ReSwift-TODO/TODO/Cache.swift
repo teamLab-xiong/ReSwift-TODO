@@ -32,7 +32,7 @@ final class Cache {
                 return []
         }
         
-        return todos.todos
+        return todos.todos.sorted { $0.date > $1.date}
     }
     
     private func todos(_ callback: @escaping (([TODO]) -> Void)) {

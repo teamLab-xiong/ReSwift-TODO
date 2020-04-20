@@ -11,6 +11,7 @@ import ReSwift
 
 protocol MasterCoordinatorDelegate: AnyObject {
     func showDetail(with todo: TODO, from master: MasterViewController)
+    func showCreateViewController(from master: MasterViewController)
     func delete(_ todo: TODO, from master: MasterViewController)
 }
 
@@ -20,14 +21,16 @@ class MasterViewController: UITableViewController, StoreSubscriber {
     typealias StoreSubscriberStateType = State
     
     func newState(state: State) {
+        tableView.beginUpdates()
         tableView.reloadData()
+        tableView.endUpdates()
     }
     
     // MARK: - Properties
     
     weak var coordinatorDelegate: MasterCoordinatorDelegate?
     
-    var store = Store<State>(reducer: State.reducer,
+    let store = Store<State>(reducer: State.reducer,
                              state: .init(),
                              middleware: [cacheMiddleware])
 
@@ -54,15 +57,11 @@ class MasterViewController: UITableViewController, StoreSubscriber {
 
     @objc
     func insertNewObject(_ sender: Any) {
-        let alert = UIAlertController(title: "TODO", message: nil, preferredStyle: .alert)
-        alert.addTextField {
-            $0.placeholder = "Input TODO"
-        }
-        alert.addAction(.init(title: "Add", style: .default) { _ in
-            guard let text = alert.textFields?.first?.text, !text.isEmpty else { return }
-            self.store.dispatch(AddTODO(todo: .init(title: text, date: Date())));
-        })
-        present(alert, animated: true)
+        coordinatorDelegate?.showCreateViewController(from: self)
+    }
+    
+    func injectTODO(_ todo: TODO) {
+        self.store.dispatch(AddTODO(todo: todo));
     }
 
     // MARK: - Table View Delegate

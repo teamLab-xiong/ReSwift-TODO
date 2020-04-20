@@ -53,6 +53,15 @@ extension ShowDetailCoordinator: MasterCoordinatorDelegate {
         guard let detailItem = detail.detailItem, todo == detailItem else { return }
         detail.detailItem = nil
     }
+    
+    func showCreateViewController(from master: MasterViewController) {
+        let storyboard = UIStoryboard(name: "Create", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "CreateViewController") as! CreateViewController
+        viewController.coordinatorDeletate = self
+        let navi = UINavigationController(rootViewController: viewController)
+        navi.modalPresentationStyle = .fullScreen
+        master.present(navi, animated: true)
+    }
 }
 
 extension ShowDetailCoordinator: UISplitViewControllerDelegate {
@@ -63,5 +72,12 @@ extension ShowDetailCoordinator: UISplitViewControllerDelegate {
             return true
         }
         return false
+    }
+}
+
+extension ShowDetailCoordinator: CreateCoordinatorDelegate {
+    func createTODO(_ todo: TODO, from source: CreateViewController) {
+        master.injectTODO(todo)
+        source.dismiss(animated: true)
     }
 }
