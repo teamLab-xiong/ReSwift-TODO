@@ -21,9 +21,7 @@ class MasterViewController: UITableViewController, StoreSubscriber {
     typealias StoreSubscriberStateType = State
     
     func newState(state: State) {
-        tableView.beginUpdates()
         tableView.reloadData()
-        tableView.endUpdates()
     }
     
     // MARK: - Properties

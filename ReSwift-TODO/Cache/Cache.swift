@@ -8,11 +8,6 @@
 
 import Foundation
 
-struct TODOS {
-    var todos: [TODO]
-}
-extension TODOS: Codable {}
-
 final class Cache {
     static let shared = Cache()
     
@@ -53,7 +48,7 @@ final class Cache {
         todos { results in
             var todos = results
             todos.append(todo)
-            self.store(.init(todos: todos))
+            self.store(todos)
         }
     }
     
@@ -61,13 +56,14 @@ final class Cache {
         todos { results in
             var todos = results
             todos.removeAll { $0 == todo }
-            self.store(.init(todos: todos))
+            self.store(todos)
         }
     }
     
-    func store(_ todos: TODOS) {
+    func store(_ todos: [TODO]) {
+        let tobeStored = TODOS(todos: todos)
         ioQueue.async {
-            if let data = try? JSONEncoder().encode(todos) {
+            if let data = try? JSONEncoder().encode(tobeStored) {
                 try! data.write(to: self.directory.appendingPathComponent(.cacheFile))
             }
         }
@@ -81,3 +77,8 @@ final class Cache {
 extension String {
     static let cacheFile = "cache.json"
 }
+
+fileprivate struct TODOS {
+    var todos: [TODO]
+}
+extension TODOS: Codable {}

@@ -144,17 +144,13 @@
 		348058A2244C7F4B00FC2319 /* ReSwift-TODO */ = {
 			isa = PBXGroup;
 			children = (
-				348058D5244C801200FC2319 /* TODO */,
 				348058A3244C7F4B00FC2319 /* AppDelegate.swift */,
-				348058A5244C7F4B00FC2319 /* SceneDelegate.swift */,
-				348058A7244C7F4B00FC2319 /* MasterViewController.swift */,
-				348058A9244C7F4B00FC2319 /* DetailViewController.swift */,
-				348058AB244C7F4B00FC2319 /* Main.storyboard */,
-				348058AE244C7F4C00FC2319 /* Assets.xcassets */,
-				348058B0244C7F4C00FC2319 /* LaunchScreen.storyboard */,
-				348058B3244C7F4C00FC2319 /* Info.plist */,
-				34805922244DCED800FC2319 /* CreateViewController.swift */,
-				34805924244DCEE800FC2319 /* Create.storyboard */,
+				34805929244DE00000FC2319 /* Cache */,
+				348058D5244C801200FC2319 /* TODO */,
+				34805928244DDFD600FC2319 /* Re */,
+				34805927244DDFC700FC2319 /* Coordinator */,
+				34805926244DDFAF00FC2319 /* UserInterface */,
+				3480592A244DE01500FC2319 /* SupportingFiles */,
 			);
 			path = "ReSwift-TODO";
 			sourceTree = "<group>";
@@ -180,14 +176,58 @@
 		348058D5244C801200FC2319 /* TODO */ = {
 			isa = PBXGroup;
 			children = (
-				348058D8244C803900FC2319 /* State.swift */,
 				348058DA244C806600FC2319 /* TODO.swift */,
-				348058DC244C828C00FC2319 /* Action.swift */,
-				348058DE244C8B0A00FC2319 /* ShowDetailCoordinator.swift */,
-				348058E0244C940D00FC2319 /* Cache.swift */,
-				34805920244CA42000FC2319 /* Middleware.swift */,
 			);
 			path = TODO;
+			sourceTree = "<group>";
+		};
+		34805926244DDFAF00FC2319 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				348058A7244C7F4B00FC2319 /* MasterViewController.swift */,
+				348058A9244C7F4B00FC2319 /* DetailViewController.swift */,
+				348058AB244C7F4B00FC2319 /* Main.storyboard */,
+				34805922244DCED800FC2319 /* CreateViewController.swift */,
+				34805924244DCEE800FC2319 /* Create.storyboard */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		34805927244DDFC700FC2319 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				348058DE244C8B0A00FC2319 /* ShowDetailCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		34805928244DDFD600FC2319 /* Re */ = {
+			isa = PBXGroup;
+			children = (
+				348058D8244C803900FC2319 /* State.swift */,
+				348058DC244C828C00FC2319 /* Action.swift */,
+				34805920244CA42000FC2319 /* Middleware.swift */,
+			);
+			path = Re;
+			sourceTree = "<group>";
+		};
+		34805929244DE00000FC2319 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				348058E0244C940D00FC2319 /* Cache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		3480592A244DE01500FC2319 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				348058A5244C7F4B00FC2319 /* SceneDelegate.swift */,
+				348058AE244C7F4C00FC2319 /* Assets.xcassets */,
+				348058B0244C7F4C00FC2319 /* LaunchScreen.storyboard */,
+				348058B3244C7F4C00FC2319 /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		7CDEBCE11457F300BB51DFC9 /* Pods */ = {
