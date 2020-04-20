@@ -10,18 +10,12 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var detailTextView: UITextView!
     
     func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let titleLabel = detailDescriptionLabel, let dateLabel = dateLabel {
-                titleLabel.text = detail.title
-                dateLabel.text = detail.date.description
-                
-            }
-        }
+        detailTextView.text = detailItem?.title
+        dateLabel.text = detailItem?.date.description
     }
 
     override func viewDidLoad() {

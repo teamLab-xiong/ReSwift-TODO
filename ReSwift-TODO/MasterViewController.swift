@@ -11,6 +11,7 @@ import ReSwift
 
 protocol MasterCoordinatorDelegate: AnyObject {
     func showDetail(with todo: TODO, from master: MasterViewController)
+    func delete(_ todo: TODO, from master: MasterViewController)
 }
 
 class MasterViewController: UITableViewController, StoreSubscriber {
@@ -90,6 +91,7 @@ class MasterViewController: UITableViewController, StoreSubscriber {
         let todo = store.state.todos[indexPath.row]
         if editingStyle == .delete {
             store.dispatch(RemoveTODO(todo: todo))
+            coordinatorDelegate?.delete(todo, from: self)
         }
     }
     

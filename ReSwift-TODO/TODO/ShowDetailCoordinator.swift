@@ -31,8 +31,9 @@ final class ShowDetailCoordinator: Coordinator {
         split.delegate = self
         
         split.viewControllers = [masterNavi, detailNavi]
-        masterNavi.navigationItem.leftBarButtonItem = split.displayModeButtonItem
-        masterNavi.navigationItem.leftItemsSupplementBackButton = true
+        split.preferredDisplayMode = .allVisible
+        detail.navigationItem.leftBarButtonItem = split.displayModeButtonItem
+        detail.navigationItem.leftItemsSupplementBackButton = true
         
         master.coordinatorDelegate = self
     }
@@ -45,7 +46,12 @@ final class ShowDetailCoordinator: Coordinator {
 extension ShowDetailCoordinator: MasterCoordinatorDelegate {
     func showDetail(with todo: TODO, from master: MasterViewController) {
         detail.detailItem = todo
-        master.navigationController?.pushViewController(detailNavi, animated: true)
+        master.showDetailViewController(detailNavi, sender: nil)
+    }
+    
+    func delete(_ todo: TODO, from master: MasterViewController) {
+        guard let detailItem = detail.detailItem, todo == detailItem else { return }
+        detail.detailItem = nil
     }
 }
 

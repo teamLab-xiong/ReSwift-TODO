@@ -26,6 +26,7 @@ final class Cache {
     }
     
     var todos: [TODO] {
+        print(directory)
         guard let data = try? Data(contentsOf: self.directory.appendingPathComponent(.cacheFile)),
             let todos = try? JSONDecoder().decode(TODOS.self, from: data) else {
                 return []
@@ -34,7 +35,7 @@ final class Cache {
         return todos.todos
     }
     
-    func todos(_ callback: @escaping (([TODO]) -> Void)) {
+    private func todos(_ callback: @escaping (([TODO]) -> Void)) {
         ioQueue.async {
             guard let data = try? Data(contentsOf: self.directory.appendingPathComponent(.cacheFile)),
                 let todos = try? JSONDecoder().decode(TODOS.self, from: data) else {
