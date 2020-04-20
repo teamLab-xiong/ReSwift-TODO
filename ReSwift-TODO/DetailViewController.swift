@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet private weak var detailTextView: UITextView!
     
     func configureView() {
+        guard let detailTextView = detailTextView, let dateLabel = dateLabel else { return }
         detailTextView.text = detailItem?.title
         dateLabel.text = detailItem?.date.description
     }
