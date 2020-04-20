@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTD-mP-861">
-                                <rect key="frame" x="12" y="88" width="390" height="754"/>
+                                <rect key="frame" x="8" y="88" width="398" height="746"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -25,7 +25,7 @@
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Okl-qd-lts">
-                                <rect key="frame" x="12" y="848" width="390" height="14"/>
+                                <rect key="frame" x="8" y="840" width="398" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="Hun-dC-5VW"/>
                                 </constraints>
@@ -37,11 +37,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Okl-qd-lts" firstAttribute="top" secondItem="VTD-mP-861" secondAttribute="bottom" constant="6" id="DdU-IN-CGw"/>
-                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="Okl-qd-lts" secondAttribute="trailing" constant="12" id="Eb0-3K-TOQ"/>
-                            <constraint firstItem="VUw-jc-0yf" firstAttribute="bottom" secondItem="Okl-qd-lts" secondAttribute="bottom" id="M7c-FG-JgI"/>
-                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="VTD-mP-861" secondAttribute="trailing" constant="12" id="VU0-Dm-uhe"/>
-                            <constraint firstItem="VTD-mP-861" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="12" id="Yiw-GH-77F"/>
-                            <constraint firstItem="Okl-qd-lts" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="12" id="th7-xY-BDL"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="Okl-qd-lts" secondAttribute="trailing" constant="8" id="Eb0-3K-TOQ"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="bottom" secondItem="Okl-qd-lts" secondAttribute="bottom" constant="8" id="M7c-FG-JgI"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="VTD-mP-861" secondAttribute="trailing" constant="8" id="VU0-Dm-uhe"/>
+                            <constraint firstItem="VTD-mP-861" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="8" id="Yiw-GH-77F"/>
+                            <constraint firstItem="Okl-qd-lts" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="8" id="th7-xY-BDL"/>
                             <constraint firstItem="VTD-mP-861" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" id="zvs-3w-VGZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
