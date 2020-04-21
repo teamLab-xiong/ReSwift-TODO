@@ -10,6 +10,7 @@ import Foundation
 
 struct TODO {
     var title: String
+    var message: String?
     var date: Date
 }
 

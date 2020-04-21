@@ -28,7 +28,7 @@ extension State: Reducible {
             
             switch action {
             case let action as AddTODO:
-                newState.todos.append(action.todo)
+                newState.todos.insert(action.todo, at: 0)
             case let action as RemoveTODO:
                 newState.todos.removeAll { $0 == action.todo }
             default:
