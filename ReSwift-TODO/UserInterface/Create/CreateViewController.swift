@@ -30,7 +30,7 @@ class CreateViewController: UIViewController {
         
         guard !textView.text.isEmpty else { return }
         
-        let todo = TODO(title: textView.text, date: Date())
+        let todo = TODO(title: textView.text, message: "", date: Date())
         coordinatorDeletate?.createTODO(todo, from: self)
     }
 }
