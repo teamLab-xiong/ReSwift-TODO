@@ -26,6 +26,7 @@
 		34805925244DCEE800FC2319 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34805924244DCEE800FC2319 /* Create.storyboard */; };
 		34805931244E6E6800FC2319 /* MasterItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480592F244E6E6800FC2319 /* MasterItemCell.swift */; };
 		34805932244E6E6800FC2319 /* MasterItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34805930244E6E6800FC2319 /* MasterItemCell.xib */; };
+		34FEC9B5244E774D006F4690 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FEC9B4244E774D006F4690 /* Injectable.swift */; };
 		546F922102442D08C1939B12 /* Pods_ReSwift_TODOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 197D2E5949AF0768B9A5F7C2 /* Pods_ReSwift_TODOTests.framework */; };
 		B4DF9CEA0C5442525DA712EB /* Pods_ReSwift_TODO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A39A310C361161178032AB1D /* Pods_ReSwift_TODO.framework */; };
 		B7331055CED76856BD0319B8 /* Pods_ReSwift_TODO_ReSwift_TODOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 781C0A21D4DB1A8009747FBB /* Pods_ReSwift_TODO_ReSwift_TODOUITests.framework */; };
@@ -76,6 +77,7 @@
 		34805924244DCEE800FC2319 /* Create.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
 		3480592F244E6E6800FC2319 /* MasterItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterItemCell.swift; sourceTree = "<group>"; };
 		34805930244E6E6800FC2319 /* MasterItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterItemCell.xib; sourceTree = "<group>"; };
+		34FEC9B4244E774D006F4690 /* Injectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		4BE8659CBE1B45D1AAB246FB /* Pods-ReSwift-TODO-ReSwift-TODOUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReSwift-TODO-ReSwift-TODOUITests.debug.xcconfig"; path = "Target Support Files/Pods-ReSwift-TODO-ReSwift-TODOUITests/Pods-ReSwift-TODO-ReSwift-TODOUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		781C0A21D4DB1A8009747FBB /* Pods_ReSwift_TODO_ReSwift_TODOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReSwift_TODO_ReSwift_TODOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCC6A3E12D28453270E1539 /* Pods-ReSwift-TODOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReSwift-TODOTests.release.xcconfig"; path = "Target Support Files/Pods-ReSwift-TODOTests/Pods-ReSwift-TODOTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				348058A3244C7F4B00FC2319 /* AppDelegate.swift */,
+				34FEC9B3244E774D006F4690 /* Protocol */,
 				34805929244DE00000FC2319 /* Cache */,
 				348058D5244C801200FC2319 /* TODO */,
 				34805928244DDFD600FC2319 /* Re */,
@@ -275,10 +278,10 @@
 			path = Master;
 			sourceTree = "<group>";
 		};
-		34805934244E6E8600FC2319 /* Protocol */ = {
+		34FEC9B3244E774D006F4690 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				34805935244E70DD00FC2319 /* Injectable.swift */,
+				34FEC9B4244E774D006F4690 /* Injectable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				348058A6244C7F4B00FC2319 /* SceneDelegate.swift in Sources */,
 				348058A8244C7F4B00FC2319 /* MasterViewController.swift in Sources */,
 				348058AA244C7F4B00FC2319 /* DetailViewController.swift in Sources */,
+				34FEC9B5244E774D006F4690 /* Injectable.swift in Sources */,
 				34805921244CA42000FC2319 /* Middleware.swift in Sources */,
 				348058DD244C828C00FC2319 /* Action.swift in Sources */,
 				348058D9244C803900FC2319 /* State.swift in Sources */,
