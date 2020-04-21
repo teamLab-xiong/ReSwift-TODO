@@ -24,6 +24,11 @@ class CreateViewController: UITableViewController {
 
         titleTextField.delegate = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        titleTextField.becomeFirstResponder()
+    }
 
     
     @IBAction func saveAction(_ sender: UIBarButtonItem) {
