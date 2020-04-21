@@ -12,8 +12,9 @@ protocol CreateCoordinatorDelegate: AnyObject {
     func createTODO(_ todo: TODO, from source: CreateViewController)
 }
 
-class CreateViewController: UIViewController {
+class CreateViewController: UITableViewController {
     
+    @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var textView: UITextView!
     
     weak var coordinatorDeletate: CreateCoordinatorDelegate?
@@ -30,7 +31,7 @@ class CreateViewController: UIViewController {
         
         guard !textView.text.isEmpty else { return }
         
-        let todo = TODO(title: textView.text, message: "", date: Date())
+        let todo = TODO(title: textView.text, message: textView.text, date: Date())
         coordinatorDeletate?.createTODO(todo, from: self)
     }
 }

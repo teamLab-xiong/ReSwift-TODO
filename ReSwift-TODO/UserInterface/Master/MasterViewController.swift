@@ -38,7 +38,13 @@ class MasterViewController: UITableViewController, StoreSubscriber {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configView()
+    }
+    
+    private func configView() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
+     
+        tableView.register(UINib(nibName: "MasterItemCell", bundle: nil), forCellReuseIdentifier: "MasterItemCell")
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -67,10 +73,9 @@ class MasterViewController: UITableViewController, StoreSubscriber {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MasterItemCell", for: indexPath) as! MasterItemCell
         let todo = store.state.todos[indexPath.row]
-        cell.textLabel!.text = todo.title
-        cell.detailTextLabel?.text = todo.date.description
+        cell.config(with: todo)
         return cell
     }
 
