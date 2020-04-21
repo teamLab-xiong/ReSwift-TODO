@@ -37,7 +37,6 @@ class MasterViewController: UITableViewController, StoreSubscriber {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.leftBarButtonItem = editButtonItem
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
     }
@@ -63,11 +62,6 @@ class MasterViewController: UITableViewController, StoreSubscriber {
     }
 
     // MARK: - Table View Delegate
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return store.state.todos.count
     }
