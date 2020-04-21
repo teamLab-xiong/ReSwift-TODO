@@ -24,8 +24,8 @@
 		34805921244CA42000FC2319 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34805920244CA42000FC2319 /* Middleware.swift */; };
 		34805923244DCED800FC2319 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34805922244DCED800FC2319 /* CreateViewController.swift */; };
 		34805925244DCEE800FC2319 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34805924244DCEE800FC2319 /* Create.storyboard */; };
-		34805931244E6E6800FC2319 /* MasterItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480592F244E6E6800FC2319 /* MasterItemCell.swift */; };
-		34805932244E6E6800FC2319 /* MasterItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34805930244E6E6800FC2319 /* MasterItemCell.xib */; };
+		34FEC9B1244E7744006F4690 /* MasterItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FEC9AF244E7744006F4690 /* MasterItemCell.swift */; };
+		34FEC9B2244E7744006F4690 /* MasterItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34FEC9B0244E7744006F4690 /* MasterItemCell.xib */; };
 		34FEC9B5244E774D006F4690 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FEC9B4244E774D006F4690 /* Injectable.swift */; };
 		546F922102442D08C1939B12 /* Pods_ReSwift_TODOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 197D2E5949AF0768B9A5F7C2 /* Pods_ReSwift_TODOTests.framework */; };
 		B4DF9CEA0C5442525DA712EB /* Pods_ReSwift_TODO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A39A310C361161178032AB1D /* Pods_ReSwift_TODO.framework */; };
@@ -75,8 +75,8 @@
 		34805920244CA42000FC2319 /* Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
 		34805922244DCED800FC2319 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		34805924244DCEE800FC2319 /* Create.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
-		3480592F244E6E6800FC2319 /* MasterItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterItemCell.swift; sourceTree = "<group>"; };
-		34805930244E6E6800FC2319 /* MasterItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterItemCell.xib; sourceTree = "<group>"; };
+		34FEC9AF244E7744006F4690 /* MasterItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterItemCell.swift; sourceTree = "<group>"; };
+		34FEC9B0244E7744006F4690 /* MasterItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterItemCell.xib; sourceTree = "<group>"; };
 		34FEC9B4244E774D006F4690 /* Injectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		4BE8659CBE1B45D1AAB246FB /* Pods-ReSwift-TODO-ReSwift-TODOUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReSwift-TODO-ReSwift-TODOUITests.debug.xcconfig"; path = "Target Support Files/Pods-ReSwift-TODO-ReSwift-TODOUITests/Pods-ReSwift-TODO-ReSwift-TODOUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		781C0A21D4DB1A8009747FBB /* Pods_ReSwift_TODO_ReSwift_TODOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReSwift_TODO_ReSwift_TODOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +157,7 @@
 				34805928244DDFD600FC2319 /* Re */,
 				34805927244DDFC700FC2319 /* Coordinator */,
 				34805926244DDFAF00FC2319 /* UserInterface */,
+				34FEC9AD244E7744006F4690 /* View */,
 				3480592A244DE01500FC2319 /* SupportingFiles */,
 			);
 			path = "ReSwift-TODO";
@@ -235,14 +236,6 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		3480592B244E6E1E00FC2319 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				34805933244E6E6C00FC2319 /* Master */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		3480592C244E6E2B00FC2319 /* Master */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,11 +262,19 @@
 			path = Create;
 			sourceTree = "<group>";
 		};
-		34805933244E6E6C00FC2319 /* Master */ = {
+		34FEC9AD244E7744006F4690 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3480592F244E6E6800FC2319 /* MasterItemCell.swift */,
-				34805930244E6E6800FC2319 /* MasterItemCell.xib */,
+				34FEC9AE244E7744006F4690 /* Master */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34FEC9AE244E7744006F4690 /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				34FEC9AF244E7744006F4690 /* MasterItemCell.swift */,
+				34FEC9B0244E7744006F4690 /* MasterItemCell.xib */,
 			);
 			path = Master;
 			sourceTree = "<group>";
@@ -411,6 +412,7 @@
 			files = (
 				34805925244DCEE800FC2319 /* Create.storyboard in Resources */,
 				348058B2244C7F4C00FC2319 /* LaunchScreen.storyboard in Resources */,
+				34FEC9B2244E7744006F4690 /* MasterItemCell.xib in Resources */,
 				348058AF244C7F4C00FC2319 /* Assets.xcassets in Resources */,
 				348058AD244C7F4B00FC2319 /* Main.storyboard in Resources */,
 			);
@@ -559,6 +561,7 @@
 			files = (
 				34805923244DCED800FC2319 /* CreateViewController.swift in Sources */,
 				348058A4244C7F4B00FC2319 /* AppDelegate.swift in Sources */,
+				34FEC9B1244E7744006F4690 /* MasterItemCell.swift in Sources */,
 				348058E1244C940D00FC2319 /* Cache.swift in Sources */,
 				348058A6244C7F4B00FC2319 /* SceneDelegate.swift in Sources */,
 				348058A8244C7F4B00FC2319 /* MasterViewController.swift in Sources */,
