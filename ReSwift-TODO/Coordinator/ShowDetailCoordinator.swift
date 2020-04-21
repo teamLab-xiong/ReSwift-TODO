@@ -78,6 +78,5 @@ extension ShowDetailCoordinator: UISplitViewControllerDelegate {
 extension ShowDetailCoordinator: CreateCoordinatorDelegate {
     func createTODO(_ todo: TODO, from source: CreateViewController) {
         master.injectTODO(todo)
-        source.dismiss(animated: true)
     }
 }
