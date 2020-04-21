@@ -18,16 +18,16 @@
                         <sections>
                             <tableViewSection id="G8c-su-e2v">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="56" id="sHY-Tn-AKl">
-                                        <rect key="frame" x="20" y="18" width="374" height="56"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="48" id="sHY-Tn-AKl">
+                                        <rect key="frame" x="20" y="18" width="374" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sHY-Tn-AKl" id="Lb4-3x-tJ6">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Input todo title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X8B-mr-t35">
-                                                    <rect key="frame" x="12" y="0.0" width="350" height="56"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="12" y="0.0" width="350" height="48"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -41,18 +41,18 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="547" id="bk0-Iz-sex">
-                                        <rect key="frame" x="20" y="74" width="374" height="547"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="bk0-Iz-sex">
+                                        <rect key="frame" x="20" y="66" width="374" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bk0-Iz-sex" id="IMo-ba-ZK0">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="547"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBp-W3-CGS">
-                                                    <rect key="frame" x="12" y="0.0" width="390" height="547"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBp-W3-CGS">
+                                                    <rect key="frame" x="12" y="0.0" width="350" height="300"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>

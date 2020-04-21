@@ -22,7 +22,7 @@ class CreateViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        titleTextField.delegate = self
     }
 
     
@@ -31,7 +31,13 @@ class CreateViewController: UITableViewController {
         
         guard !textView.text.isEmpty else { return }
         
-        let todo = TODO(title: textView.text, message: textView.text, date: Date())
+        let todo = TODO(title: titleTextField.text ?? "", message: textView.text, date: Date())
         coordinatorDeletate?.createTODO(todo, from: self)
+    }
+}
+
+extension CreateViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textView.becomeFirstResponder()
     }
 }

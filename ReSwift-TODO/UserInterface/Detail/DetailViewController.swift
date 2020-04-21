@@ -15,7 +15,8 @@ class DetailViewController: UIViewController {
     
     func configureView() {
         guard let detailTextView = detailTextView, let dateLabel = dateLabel else { return }
-        detailTextView.text = detailItem?.title
+        title = detailItem?.title
+        detailTextView.text = detailItem?.message
         dateLabel.text = detailItem?.date.description
     }
 
