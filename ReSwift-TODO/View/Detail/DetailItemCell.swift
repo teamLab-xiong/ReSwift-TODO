@@ -1,5 +1,5 @@
 //
-//  DetailItelCell.swift
+//  DetailItemCell.swift
 //  ReSwift-TODO
 //
 //  Created by Xiong Ju 熊炬 on 2020/4/26.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailItemCell: UITableViewCell {
+class DetailItemCell: UITableViewCell, NibReusable {
     @IBOutlet fileprivate weak var messageLabel: UILabel!
 }
 
