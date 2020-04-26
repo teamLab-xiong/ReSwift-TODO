@@ -28,7 +28,10 @@ class DetailViewController: UITableViewController {
 
 extension DetailViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        guard detailItem != nil else {
+            return 0
+        }
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
