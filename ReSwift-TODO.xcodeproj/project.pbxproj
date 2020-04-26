@@ -161,7 +161,7 @@
 				34FEC9B3244E774D006F4690 /* Protocol */,
 				34805929244DE00000FC2319 /* Cache */,
 				348058D5244C801200FC2319 /* TODO */,
-				34805928244DDFD600FC2319 /* Re */,
+				34805928244DDFD600FC2319 /* Redux */,
 				34805927244DDFC700FC2319 /* Coordinator */,
 				34805926244DDFAF00FC2319 /* UserInterface */,
 				34FEC9AD244E7744006F4690 /* View */,
@@ -214,14 +214,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		34805928244DDFD600FC2319 /* Re */ = {
+		34805928244DDFD600FC2319 /* Redux */ = {
 			isa = PBXGroup;
 			children = (
 				348058D8244C803900FC2319 /* State.swift */,
 				348058DC244C828C00FC2319 /* Action.swift */,
 				34805920244CA42000FC2319 /* Middleware.swift */,
 			);
-			path = Re;
+			path = Redux;
 			sourceTree = "<group>";
 		};
 		34805929244DE00000FC2319 /* Cache */ = {
