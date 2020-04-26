@@ -15,11 +15,12 @@ protocol Coordinator {
 
 final class ShowDetailCoordinator: Coordinator {
     
-    private lazy var storyboard = UIStoryboard(name: "Main", bundle: nil)
+    private lazy var mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    private lazy var detailStoryboard = UIStoryboard(name: "Detail", bundle: nil)
     
-    private lazy var master = storyboard.instantiateViewController(withIdentifier: "MasterViewController") as! MasterViewController
+    private lazy var master = mainStoryboard.instantiateViewController(withIdentifier: "MasterViewController") as! MasterViewController
     
-    private lazy var detail = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+    private lazy var detail = detailStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
     
     private lazy var masterNavi = UINavigationController(rootViewController: self.master)
     private lazy var detailNavi = UINavigationController(rootViewController: self.detail)

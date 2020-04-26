@@ -42,6 +42,8 @@ class MasterViewController: UITableViewController, StoreSubscriber {
     }
     
     private func configView() {
+        title = "TODOs"
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
      
         tableView.register(UINib(nibName: "MasterItemCell", bundle: nil), forCellReuseIdentifier: "MasterItemCell")
