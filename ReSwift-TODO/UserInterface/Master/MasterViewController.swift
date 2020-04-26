@@ -42,9 +42,11 @@ class MasterViewController: UITableViewController, StoreSubscriber {
     }
     
     private func configView() {
+        title = "TODOs"
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
      
-        tableView.register(UINib(nibName: "MasterItemCell", bundle: nil), forCellReuseIdentifier: "MasterItemCell")
+        tableView.register(cellType: MasterItemCell.self)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -73,7 +75,7 @@ class MasterViewController: UITableViewController, StoreSubscriber {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MasterItemCell", for: indexPath) as! MasterItemCell
+        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: MasterItemCell.self)
         let todo = store.state.todos[indexPath.row]
         cell.config(with: todo)
         return cell
@@ -96,4 +98,6 @@ class MasterViewController: UITableViewController, StoreSubscriber {
         coordinatorDelegate?.showDetail(with: todo, from: self)
     }
 }
+
+extension MasterViewController: StoryboardLoadable {}
 

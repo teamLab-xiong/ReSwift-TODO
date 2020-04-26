@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MasterItemCell: UITableViewCell {
+class MasterItemCell: UITableViewCell, NibReusable {
     @IBOutlet fileprivate weak var titleLabel: UILabel!
     @IBOutlet fileprivate weak var messageLabel: UILabel!
     @IBOutlet fileprivate weak var dateLabel: UILabel!

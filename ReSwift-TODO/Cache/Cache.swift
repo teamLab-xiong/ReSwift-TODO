@@ -9,20 +9,21 @@
 import Foundation
 
 final class Cache {
-    static let shared = Cache()
+    static let shared = Cache(name: "default")
     
-    let ioQueue = DispatchQueue(label: "todo.cache.label")
-    let callbackQueue = DispatchQueue.main
+    private let ioQueue = DispatchQueue(label: "todo.cache.label")
+    private let callbackQueue = DispatchQueue.main
     
     private lazy var directory = try! FileManager.default.url(for: .libraryDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
     
-    private init() {
-        
+    private var cacheFileName: String
+    
+    init(name: String) {
+        cacheFileName = name + "-" + .cacheFile
     }
     
     var todos: [TODO] {
-        print(directory)
-        guard let data = try? Data(contentsOf: self.directory.appendingPathComponent(.cacheFile)),
+        guard let data = try? Data(contentsOf: self.directory.appendingPathComponent(cacheFileName)),
             let todos = try? JSONDecoder().decode(TODOS.self, from: data) else {
                 return []
         }
@@ -32,7 +33,7 @@ final class Cache {
     
     private func todos(_ callback: @escaping (([TODO]) -> Void)) {
         ioQueue.async {
-            guard let data = try? Data(contentsOf: self.directory.appendingPathComponent(.cacheFile)),
+            guard let data = try? Data(contentsOf: self.directory.appendingPathComponent(self.cacheFileName)),
                 let todos = try? JSONDecoder().decode(TODOS.self, from: data) else {
                     self.callbackQueue.async { callback([]) }
                     return
@@ -44,33 +45,34 @@ final class Cache {
         }
     }
     
-    func insert(_ todo: TODO) {
+    func insert(_ todo: TODO, done: (() -> Void)? = nil) {
         todos { results in
             var todos = results
             todos.append(todo)
-            self.store(todos)
+            self.store(todos, done: done)
         }
     }
     
-    func remove(_ todo: TODO) {
+    func remove(_ todo: TODO, done: (() -> Void)? = nil) {
         todos { results in
             var todos = results
             todos.removeAll { $0 == todo }
-            self.store(todos)
+            self.store(todos, done: done)
         }
     }
     
-    func store(_ todos: [TODO]) {
+    func store(_ todos: [TODO], done: (() -> Void)? = nil) {
         let tobeStored = TODOS(todos: todos)
         ioQueue.async {
             if let data = try? JSONEncoder().encode(tobeStored) {
-                try! data.write(to: self.directory.appendingPathComponent(.cacheFile))
+                try! data.write(to: self.directory.appendingPathComponent(self.cacheFileName))
             }
+            done?()
         }
     }
     
     func clear() {
-        try? FileManager.default.removeItem(at: directory.appendingPathComponent(.cacheFile))
+        try? FileManager.default.removeItem(at: directory.appendingPathComponent(cacheFileName))
     }
 }
 

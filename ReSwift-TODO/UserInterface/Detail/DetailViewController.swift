@@ -8,27 +8,42 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UITableViewController {
 
-    @IBOutlet private weak var dateLabel: UILabel!
-    @IBOutlet private weak var detailTextView: UITextView!
-    
-    func configureView() {
-        guard let detailTextView = detailTextView, let dateLabel = dateLabel else { return }
-        title = detailItem?.title
-        detailTextView.text = detailItem?.message
-        dateLabel.text = detailItem?.date.description
-    }
+    @IBOutlet private weak var detailLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView()
+        
+        tableView.register(cellType: DetailItemCell.self)
     }
 
     var detailItem: TODO? {
         didSet {
-            configureView()
+            title = detailItem?.title
+            tableView.reloadData()
         }
     }
 }
+
+extension DetailViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard detailItem != nil else {
+            return 0
+        }
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: DetailItemCell.self)
+        cell.config(with: detailItem?.message)
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        detailItem?.date.description
+    }
+}
+
+extension DetailViewController: StoryboardLoadable {}
 
