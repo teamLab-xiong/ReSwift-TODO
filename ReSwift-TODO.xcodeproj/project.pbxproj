@@ -30,6 +30,7 @@
 		34C4092E2455778800EAEE1B /* NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C4092D2455778800EAEE1B /* NibReusable.swift */; };
 		34C4093124557A2700EAEE1B /* TableView+NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C4093024557A2700EAEE1B /* TableView+NibReusable.swift */; };
 		34C40933245596D700EAEE1B /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C40932245596D700EAEE1B /* StoryboardLoadable.swift */; };
+		34C409352455B54000EAEE1B /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C409342455B54000EAEE1B /* TableViewDataSource.swift */; };
 		34FEC9B1244E7744006F4690 /* MasterItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FEC9AF244E7744006F4690 /* MasterItemCell.swift */; };
 		34FEC9B2244E7744006F4690 /* MasterItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34FEC9B0244E7744006F4690 /* MasterItemCell.xib */; };
 		34FEC9B5244E774D006F4690 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FEC9B4244E774D006F4690 /* Injectable.swift */; };
@@ -87,6 +88,7 @@
 		34C4092D2455778800EAEE1B /* NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibReusable.swift; sourceTree = "<group>"; };
 		34C4093024557A2700EAEE1B /* TableView+NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+NibReusable.swift"; sourceTree = "<group>"; };
 		34C40932245596D700EAEE1B /* StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
+		34C409342455B54000EAEE1B /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		34FEC9AF244E7744006F4690 /* MasterItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterItemCell.swift; sourceTree = "<group>"; };
 		34FEC9B0244E7744006F4690 /* MasterItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterItemCell.xib; sourceTree = "<group>"; };
 		34FEC9B4244E774D006F4690 /* Injectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				34805926244DDFAF00FC2319 /* UserInterface */,
 				34FEC9AD244E7744006F4690 /* View */,
 				3480592A244DE01500FC2319 /* SupportingFiles */,
+				34C409342455B54000EAEE1B /* TableViewDataSource.swift */,
 			);
 			path = "ReSwift-TODO";
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				34FEC9B5244E774D006F4690 /* Injectable.swift in Sources */,
 				34C4092B2455405D00EAEE1B /* DetailItemCell.swift in Sources */,
 				34805921244CA42000FC2319 /* Middleware.swift in Sources */,
+				34C409352455B54000EAEE1B /* TableViewDataSource.swift in Sources */,
 				348058DD244C828C00FC2319 /* Action.swift in Sources */,
 				348058D9244C803900FC2319 /* State.swift in Sources */,
 				34C40933245596D700EAEE1B /* StoryboardLoadable.swift in Sources */,
