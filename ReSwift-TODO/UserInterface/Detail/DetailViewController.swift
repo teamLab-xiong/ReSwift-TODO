@@ -33,7 +33,7 @@ extension DetailViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailItemCell", for: indexPath) as! DetailItemCell
-        cell.messageLabel.text = detailItem?.message
+        cell.config(with: detailItem?.message)
         return cell
     }
     

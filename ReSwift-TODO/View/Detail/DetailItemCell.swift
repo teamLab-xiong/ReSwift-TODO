@@ -9,6 +9,12 @@
 import UIKit
 
 class DetailItemCell: UITableViewCell {
-    
-    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet fileprivate weak var messageLabel: UILabel!
+}
+
+extension DetailItemCell: Injectable {
+    typealias Dependency = String?
+    func inject(_ dependency: Dependency) {
+        messageLabel.text = dependency
+    }
 }
