@@ -15,12 +15,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        guard let window = window, let splitViewController = window.rootViewController as? UISplitViewController else { return }
+        guard let window = window else { return }
         
-        let coordinator = ShowDetailCoordinator(split: splitViewController)
+        let split = UISplitViewController()
+        let coordinator = ShowDetailCoordinator(split: split)
         coordinator.start()
-        
         self.coordinator = coordinator
+        
+        window.rootViewController = split
+        window.makeKeyAndVisible()
+        
     }
 }
 

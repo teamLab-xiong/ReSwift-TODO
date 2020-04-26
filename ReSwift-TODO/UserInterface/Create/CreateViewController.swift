@@ -46,3 +46,5 @@ extension CreateViewController: UITextFieldDelegate {
         textView.becomeFirstResponder()
     }
 }
+
+extension CreateViewController: StoryboardLoadable {}

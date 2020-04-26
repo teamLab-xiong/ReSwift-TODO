@@ -99,3 +99,5 @@ class MasterViewController: UITableViewController, StoreSubscriber {
     }
 }
 
+extension MasterViewController: StoryboardLoadable {}
+

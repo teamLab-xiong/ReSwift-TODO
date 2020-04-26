@@ -15,13 +15,11 @@ protocol Coordinator {
 
 final class ShowDetailCoordinator: Coordinator {
     
-    private lazy var mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    private lazy var mainStoryboard = UIStoryboard(name: "Master", bundle: nil)
     private lazy var detailStoryboard = UIStoryboard(name: "Detail", bundle: nil)
     
-    private lazy var master = mainStoryboard.instantiateViewController(withIdentifier: "MasterViewController") as! MasterViewController
-    
-    private lazy var detail = detailStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-    
+    private lazy var master = MasterViewController.instantiate()
+    private lazy var detail = DetailViewController.instantiate()
     private lazy var masterNavi = UINavigationController(rootViewController: self.master)
     private lazy var detailNavi = UINavigationController(rootViewController: self.detail)
     
@@ -56,10 +54,9 @@ extension ShowDetailCoordinator: MasterCoordinatorDelegate {
     }
     
     func showCreateViewController(from master: MasterViewController) {
-        let storyboard = UIStoryboard(name: "Create", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "CreateViewController") as! CreateViewController
-        viewController.coordinatorDeletate = self
-        let navi = UINavigationController(rootViewController: viewController)
+        let create = CreateViewController.instantiate()
+        create.coordinatorDeletate = self
+        let navi = UINavigationController(rootViewController: create)
         navi.modalPresentationStyle = .fullScreen
         master.present(navi, animated: true)
     }

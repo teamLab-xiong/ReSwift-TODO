@@ -41,7 +41,7 @@ class ReSwift_TODOTests: XCTestCase {
         ]
         
         cache.store(todos) {
-            XCTAssertEqual(self.cache.todos.count, 7)
+            XCTAssertEqual(self.cache.todos.count, todos.count)
         }
         
         cache.clear()

@@ -42,3 +42,5 @@ extension DetailViewController {
     }
 }
 
+extension DetailViewController: StoryboardLoadable {}
+
