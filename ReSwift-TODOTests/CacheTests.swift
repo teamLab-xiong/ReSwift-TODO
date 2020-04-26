@@ -27,4 +27,25 @@ class ReSwift_TODOTests: XCTestCase {
             XCTAssertEqual(todo.date, date)
         }
     }
+    
+    func testCacheStoreBatch() {
+        
+        let todos: [TODO] = [
+            .init(title: "one", message: "one message", date: Date()),
+            .init(title: "two", message: "two message", date: Date()),
+            .init(title: "three", message: "three message", date: Date()),
+            .init(title: "four", message: "four message", date: Date()),
+            .init(title: "five", message: "five message", date: Date()),
+            .init(title: "six", message: "six message", date: Date()),
+            .init(title: "seven", message: "seven message", date: Date())
+        ]
+        
+        cache.store(todos) {
+            XCTAssertEqual(self.cache.todos.count, 7)
+        }
+        
+        cache.clear()
+        
+        XCTAssertEqual(self.cache.todos.count, 0)
+    }
 }
