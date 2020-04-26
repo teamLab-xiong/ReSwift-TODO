@@ -79,7 +79,7 @@
 		34805922244DCED800FC2319 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		34805924244DCEE800FC2319 /* Create.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
 		34C409262455382E00EAEE1B /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
-		34C409292455405D00EAEE1B /* DetailItelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItelCell.swift; sourceTree = "<group>"; };
+		34C409292455405D00EAEE1B /* DetailItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemCell.swift; sourceTree = "<group>"; };
 		34C4092A2455405D00EAEE1B /* DetailItelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailItelCell.xib; sourceTree = "<group>"; };
 		34FEC9AF244E7744006F4690 /* MasterItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterItemCell.swift; sourceTree = "<group>"; };
 		34FEC9B0244E7744006F4690 /* MasterItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterItemCell.xib; sourceTree = "<group>"; };
@@ -272,7 +272,7 @@
 		34C409282455404600EAEE1B /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				34C409292455405D00EAEE1B /* DetailItelCell.swift */,
+				34C409292455405D00EAEE1B /* DetailItemCell.swift */,
 				34C4092A2455405D00EAEE1B /* DetailItelCell.xib */,
 			);
 			path = Detail;
@@ -586,7 +586,7 @@
 				348058A8244C7F4B00FC2319 /* MasterViewController.swift in Sources */,
 				348058AA244C7F4B00FC2319 /* DetailViewController.swift in Sources */,
 				34FEC9B5244E774D006F4690 /* Injectable.swift in Sources */,
-				34C4092B2455405D00EAEE1B /* DetailItelCell.swift in Sources */,
+				34C4092B2455405D00EAEE1B /* DetailItemCell.swift in Sources */,
 				34805921244CA42000FC2319 /* Middleware.swift in Sources */,
 				348058DD244C828C00FC2319 /* Action.swift in Sources */,
 				348058D9244C803900FC2319 /* State.swift in Sources */,

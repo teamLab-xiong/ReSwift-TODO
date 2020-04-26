@@ -15,7 +15,7 @@ class DetailViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: "DetailItelCell", bundle: nil), forCellReuseIdentifier: "DetailItelCell")
+        tableView.register(UINib(nibName: "DetailItemCell", bundle: nil), forCellReuseIdentifier: "DetailItemCell")
     }
 
     var detailItem: TODO? {
@@ -32,7 +32,7 @@ extension DetailViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailItelCell", for: indexPath) as! DetailItelCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailItemCell", for: indexPath) as! DetailItemCell
         cell.messageLabel.text = detailItem?.message
         return cell
     }
