@@ -11,7 +11,7 @@
 		348058A6244C7F4B00FC2319 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348058A5244C7F4B00FC2319 /* SceneDelegate.swift */; };
 		348058A8244C7F4B00FC2319 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348058A7244C7F4B00FC2319 /* MasterViewController.swift */; };
 		348058AA244C7F4B00FC2319 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348058A9244C7F4B00FC2319 /* DetailViewController.swift */; };
-		348058AD244C7F4B00FC2319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348058AB244C7F4B00FC2319 /* Main.storyboard */; };
+		348058AD244C7F4B00FC2319 /* Master.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348058AB244C7F4B00FC2319 /* Master.storyboard */; };
 		348058AF244C7F4C00FC2319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348058AE244C7F4C00FC2319 /* Assets.xcassets */; };
 		348058B2244C7F4C00FC2319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348058B0244C7F4C00FC2319 /* LaunchScreen.storyboard */; };
 		348058BD244C7F4D00FC2319 /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348058BC244C7F4D00FC2319 /* CacheTests.swift */; };
