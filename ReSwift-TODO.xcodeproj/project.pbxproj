@@ -14,7 +14,7 @@
 		348058AD244C7F4B00FC2319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348058AB244C7F4B00FC2319 /* Main.storyboard */; };
 		348058AF244C7F4C00FC2319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348058AE244C7F4C00FC2319 /* Assets.xcassets */; };
 		348058B2244C7F4C00FC2319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348058B0244C7F4C00FC2319 /* LaunchScreen.storyboard */; };
-		348058BD244C7F4D00FC2319 /* ReSwift_TODOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348058BC244C7F4D00FC2319 /* ReSwift_TODOTests.swift */; };
+		348058BD244C7F4D00FC2319 /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348058BC244C7F4D00FC2319 /* CacheTests.swift */; };
 		348058C8244C7F4D00FC2319 /* ReSwift_TODOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348058C7244C7F4D00FC2319 /* ReSwift_TODOUITests.swift */; };
 		348058D9244C803900FC2319 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348058D8244C803900FC2319 /* State.swift */; };
 		348058DB244C806600FC2319 /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348058DA244C806600FC2319 /* TODO.swift */; };
@@ -67,7 +67,7 @@
 		348058B1244C7F4C00FC2319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		348058B3244C7F4C00FC2319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		348058B8244C7F4D00FC2319 /* ReSwift-TODOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReSwift-TODOTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		348058BC244C7F4D00FC2319 /* ReSwift_TODOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReSwift_TODOTests.swift; sourceTree = "<group>"; };
+		348058BC244C7F4D00FC2319 /* CacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTests.swift; sourceTree = "<group>"; };
 		348058BE244C7F4D00FC2319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		348058C3244C7F4D00FC2319 /* ReSwift-TODOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReSwift-TODOUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		348058C7244C7F4D00FC2319 /* ReSwift_TODOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReSwift_TODOUITests.swift; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 		348058BB244C7F4D00FC2319 /* ReSwift-TODOTests */ = {
 			isa = PBXGroup;
 			children = (
-				348058BC244C7F4D00FC2319 /* ReSwift_TODOTests.swift */,
+				348058BC244C7F4D00FC2319 /* CacheTests.swift */,
 				348058BE244C7F4D00FC2319 /* Info.plist */,
 			);
 			path = "ReSwift-TODOTests";
@@ -615,7 +615,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				348058BD244C7F4D00FC2319 /* ReSwift_TODOTests.swift in Sources */,
+				348058BD244C7F4D00FC2319 /* CacheTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
