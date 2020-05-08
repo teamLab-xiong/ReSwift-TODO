@@ -21,7 +21,7 @@ class MasterViewController: UITableViewController, StoreSubscriber {
     typealias StoreSubscriberStateType = State
     
     func newState(state: State) {
-        tableView.reloadData()
+        dataSource.accept(state.todos)
     }
     
     // MARK: - Properties
@@ -31,6 +31,28 @@ class MasterViewController: UITableViewController, StoreSubscriber {
     let store = Store<State>(reducer: State.reducer,
                              state: .init(),
                              middleware: [cacheMiddleware])
+    
+    typealias DataSource = TableViewDataSource<TODO>
+    
+    private lazy var dataSource = DataSource(
+        tableView: tableView,
+        configCell: { ds, tb, ip, todo in
+            let cell = tb.dequeueReusableCell(for: ip, cellType: MasterItemCell.self)
+            cell.config(with: todo)
+            return cell
+        },
+        didSelectRowAtIndexPath: { [unowned self] tb, todo in
+            self.coordinatorDelegate?.showDetail(with: todo, from: self)
+        },
+        canEditRowAtIndexPath: { ds, ip in
+            return true
+        },
+        commitEditingStyle: { [unowned self] tb, style, todo in
+            if case .delete = style {
+                self.store.dispatch(RemoveTODO(todo: todo))
+                self.coordinatorDelegate?.delete(todo, from: self)
+            }
+        })
 
 
     // MARK: - Life cycle
@@ -67,35 +89,6 @@ class MasterViewController: UITableViewController, StoreSubscriber {
     
     func injectTODO(_ todo: TODO) {
         self.store.dispatch(AddTODO(todo: todo));
-    }
-
-    // MARK: - Table View Delegate
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return store.state.todos.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: MasterItemCell.self)
-        let todo = store.state.todos[indexPath.row]
-        cell.config(with: todo)
-        return cell
-    }
-
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        let todo = store.state.todos[indexPath.row]
-        if editingStyle == .delete {
-            store.dispatch(RemoveTODO(todo: todo))
-            coordinatorDelegate?.delete(todo, from: self)
-        }
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let todo = store.state.todos[indexPath.row]
-        coordinatorDelegate?.showDetail(with: todo, from: self)
     }
 }
 
